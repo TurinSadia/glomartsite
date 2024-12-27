@@ -33,7 +33,7 @@ const Nav: React.FC = () => {
       className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
         navSticky
           ? "bg-white shadow-lg text-[#D4BF8E]" // Sticky state
-          : "bg-white  text-[#332910]" // Transparent state
+          : "bg-white bg-opacity-0  text-white" // Transparent state
       }`}
     >
       <div className="container mx-auto px-3 md:px-2 py-8 flex items-center justify-between">
@@ -43,8 +43,8 @@ const Nav: React.FC = () => {
             <Image
               src="/logo.png" // Replace with the path to your image
               alt="SKY BEE LOGO"
-              width={160}
-              height={160}
+              width={200}
+              height={200}
               className=""
             />
           </Link>
@@ -79,7 +79,7 @@ const Nav: React.FC = () => {
         {/* Hamburger Menu */}
         <button
           className={`md:hidden focus:outline-none transition-transform duration-300 ${
-            navSticky ? "text-[#01699F]" : "text-[#DAE9F1]"
+            navSticky ? "text-[#332910]" : "text-[#332910]"
           }`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -106,55 +106,43 @@ const Nav: React.FC = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-black opacity-100 text-[4vw] shadow-lg text-center space-y-7 transition-transform duration-300 ${
+        className={`md:hidden bg-[#D4BF8E] opacity-100 text-[4vw] shadow-lg text-center space-y-7 transition-transform duration-300 ${
           isMenuOpen ? "h-[100vh]" : "max-h-0 overflow-hidden"
         }`}
       >
         <Link
           href="/"
-          className={`block px-4 pt-20 text-gray-100 hover:text-[#6DA9C8]  ${isActive(
-            "/"
-          )}`}
+          className={`block px-4 py-7 text-gray-100   ${isActive("/")}`}
         >
           Home
         </Link>
         <Link
           href="/sell"
-          className={`block px-4 py-2 text-gray-100 hover:text-[#6DA9C8]  ${isActive(
-            "/sell"
-          )}`}
+          className={`block px-4 py-2 text-gray-100   ${isActive("/sell")}`}
         >
           Sell
         </Link>
         <Link
           href="/rent"
-          className={`block px-4 py-2 text-gray-100 hover:text-[#6DA9C8]  ${isActive(
-            "/rent"
-          )}`}
+          className={`block px-4 py-2 text-gray-100   ${isActive("/rent")}`}
         >
           Rent
         </Link>
         <Link
           href="/about"
-          className={`block px-4 py-2 text-gray-100 hover:text-[#6DA9C8]  ${isActive(
-            "/about"
-          )}`}
+          className={`block px-4 py-2 text-gray-100   ${isActive("/about")}`}
         >
           About
         </Link>
         <Link
           href="/contact"
-          className={`block px-4 py-2 text-gray-100 hover:text-[#6DA9C8]  ${isActive(
-            "/contact"
-          )}`}
+          className={`block px-4 py-2 text-gray-100  ${isActive("/contact")}`}
         >
           Contact
         </Link>
         <Link
           href="/language"
-          className={`block px-4 py-2 text-gray-100 hover:text-[#6DA9C8]  ${isActive(
-            "/language"
-          )}`}
+          className={`block px-4 py-2 text-gray-100  ${isActive("/language")}`}
         >
           Language
         </Link>

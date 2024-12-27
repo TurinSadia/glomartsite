@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 import RecommendedSlider from "@/components/Recommended";
 import TopAreas from "@/components/TopAreas";
+import TopProjects from "@/components/TopProjects";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Feature />
       <RecommendedSlider />
       <TopAreas />
+      <TopProjects />
       <Footer />
     </div>
   );

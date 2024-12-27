@@ -5,7 +5,6 @@ const Hero = () => {
   return (
     <div>
       <ResponsiveSlider />
-    
     </div>
   )
 }

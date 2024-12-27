@@ -57,7 +57,7 @@ const TopAreas = () => {
 
   return (
     <div>
-      <div className="py-10 md:py-10 ">
+      <div className="py-10 md:pt-10">
         <div className="w-[90%] m-auto">
           <div className="mx-4">
             <h4 className="bold-18 text-[#9B7B31]">28 Results Available</h4>
@@ -66,11 +66,11 @@ const TopAreas = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-28">
         {areasData.map((area, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center text-center border border-[#F4EFE2] p-6 rounded-lg"
+            className="flex flex-col items-center justify-center text-center border-[0.8px] border-[#BF9F56] p-6 rounded-lg"
           >
             <div className="w-40 h-40 rounded-full overflow-hidden mb-4">
               <Image
